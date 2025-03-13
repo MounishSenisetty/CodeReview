@@ -1,0 +1,43 @@
+{
+  "name": "code-review",
+  "displayName": "code-review",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:Finderrors"
+  ],
+  "main": "./ext.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "Finderrors",
+        "title": "Analyze Code for Errors"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "@langchain/community": "^0.3.34",
+    "dotenv": "^16.4.7",
+    "langchain": "^0.3.19"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0"
+  }
+}
