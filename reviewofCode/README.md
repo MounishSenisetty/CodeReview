@@ -1,65 +1,35 @@
-# review-of-code README
+# VS Code Code Analyzer Extension
 
-This is the README for your extension "review-of-code". After writing up a brief description, we recommend including the following sections.
+This is a VS Code extension that analyzes selected code by sending it to a local Python server and displays the results in a Markdown preview window.
 
 ## Features
+- Analyzes selected code for issues.
+- Sends the code to a local server for processing.
+- Displays the analysis results in a new Markdown preview window.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Installation
+1. Clone this repository or copy the files into your VS Code extension folder.
+2. Run `npm install` inside the extension directory to install dependencies.
+3. Start your local Python analysis server at `http://localhost:5000/analyze`.
+4. Open the extension project in VS Code and press `F5` to launch a new Extension Development Host window.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
+1. Open a code file in VS Code.
+2. Select the code snippet you want to analyze.
+3. Press `Ctrl+Shift+P` to open the command palette.
+4. Search for and run `Finderrors`.
+5. The analysis results will appear in a new Markdown preview window.
 
 ## Requirements
+- Node.js and npm installed.
+- Python server running at `http://localhost:5000/analyze`.
+- VS Code installed.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Extension Files
+- `extension.js`: Main extension logic.
+- `package.json`: VS Code extension metadata and command registration.
+- `README.md`: Documentation.
 
-## Extension Settings
+## License
+This extension is open-source. Feel free to modify and distribute.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
